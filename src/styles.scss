@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+$white : #fff;
+
+*{
+ background-color: rgb(0, 3, 19);
+ font-family: 'Source Sans Pro', sans-serif;
+ color: $white
+}
