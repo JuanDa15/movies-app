@@ -1,0 +1,40 @@
+*{
+ background-color: unset;
+}
+
+.search-bar{
+ display: flex;
+ flex-flow: row nowrap;
+
+ &__input{
+  border: none;
+  background-color: rgb(255, 255, 255);
+  padding: .5rem .3rem;
+  color: #000;
+  outline: none;
+  border-top-left-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+  color: rgb(14, 3, 80);
+ }
+
+ &__btn{
+  padding: .5rem .3rem;
+  border: none;
+  background-color: #ffffff;
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  cursor: pointer;
+  transition: all .5s ease;
+
+  &:hover{
+   background-color: rgba(15, 3, 80, 0.671);
+   i{
+    color: #fff;
+   }
+  }
+
+ i{
+   color: rgb(14, 3, 80);
+  }
+ }
+}

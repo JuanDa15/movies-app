@@ -1,0 +1,6 @@
+<swiper [config]="config"
+        (swiper)="onSwiper($event)"
+        (slideChange)="onSlideChange()"
+        #swiper>
+  <ng-template swiperSlide *ngFor="movie of dataList">movie</ng-template>
+</swiper>
