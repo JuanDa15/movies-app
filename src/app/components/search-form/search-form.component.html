@@ -1,4 +1,13 @@
-<form class="search-bar">
- <input class="search-bar__input" type="search" placeholder="Search Movie...">
- <button class="search-bar__btn" type="button"><i class="fas fa-search"></i></button>
-</form>
+<div class="search-bar">
+  <input
+    class="search-bar__input"
+    type="search"
+    placeholder="Search Movie..."
+    (input)="keyPress()"
+    (keyup.enter)="searchMovie()"
+    #searchInput
+  />
+  <button class="search-bar__btn" type="button" (click)="searchMovie()">
+    <i class="fas fa-search"></i>
+  </button>
+</div>

@@ -1,1 +1,42 @@
-<p>movie works!</p>
+<div class="movie">
+  <h1>{{ movie.title }}</h1>
+
+  <div class="movie__main-data">
+    <div class="movie__main-overview">
+      <p>{{ movie.overview }}</p>
+      <div class="movie-information__genres">
+        <span
+          class="movie-information__genre"
+          *ngFor="let genre of movie.genres"
+          [ngStyle]="{ backgroundColor: randomColor() || '#000000' }"
+        >
+          {{ genre.name }}</span
+        >
+      </div>
+    </div>
+    <div class="movie__main-img">
+      <img [src]="movie.backdrop_path | imgPipe" [alt]="movie.title" />
+    </div>
+  </div>
+  <div class="movie__rating">
+    <h2 class="movie__rating-title">Rating</h2>
+    <div class="movie__rating-content">
+      <star-rating
+        [value]="movie.vote_average"
+        [totalstars]="10"
+        checkedcolor="#ff0"
+        size="32"
+        [readonly]="true"
+      >
+      </star-rating>
+      <div class="movie__rating-stats">
+        <p><i class="fas fa-star"></i> {{ movie.vote_average }}</p>
+        <p><i class="fas fa-users"></i> {{ movie.vote_count }}</p>
+      </div>
+    </div>
+  </div>
+  <cast-slideshow [cast-data]="cast"></cast-slideshow>
+  <div class="panel-btn" (click)="goBack()">
+    <button type="button" class="back-btn">Back</button>
+  </div>
+</div>

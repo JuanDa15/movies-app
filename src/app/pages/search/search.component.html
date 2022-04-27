@@ -1,1 +1,5 @@
-<p>search works!</p>
+<h1 class="subtitle">Results</h1>
+<div *ngIf="results.length > 0">
+  <movies-poster-grid [movies-list]="results" (onGetMovies)="fetchData($event)">
+  </movies-poster-grid>
+</div>

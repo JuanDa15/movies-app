@@ -1,28 +1,29 @@
-.navbar{
- height: 70px;
- max-height: 70px;
- background-image: linear-gradient(to bottom, rgb(14, 3, 80),  rgb(0, 3, 19));
+.navbar {
+  height: 70px;
+  max-height: 70px;
+  background-image: linear-gradient(to bottom, rgb(14, 3, 80), rgb(0, 3, 19));
+  padding: 0 1rem;
 
- &__container{
-  max-width: 1300px;
-  margin: 0 auto;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: unset;
-  height: 100%;
- }
+  &__container {
+    max-width: 1300px;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: unset;
+    height: 100%;
+  }
 
- &__item{
-  background-color: unset;
- }
+  &__item {
+    background-color: unset;
+  }
 }
-.logo-btn{
- cursor: pointer;
- transition: all .5s ease;
+.logo-btn {
+  cursor: pointer;
+  transition: all 0.5s ease;
 
- &:hover{
-  font-size: 1.4rem;
- }
+  &:hover {
+    font-size: 1.4rem;
+  }
 }

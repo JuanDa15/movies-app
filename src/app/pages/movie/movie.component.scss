@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+.movie {
+  padding: 0 0.5rem;
+
+  &__main-data {
+    margin-top: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+
+    @media (min-width: 600px) {
+      flex-flow: row nowrap;
+    }
+  }
+
+  &__main-overview {
+    text-align: justify;
+    margin-bottom: 1rem;
+    padding: 0.3rem;
+    font-size: 1.3rem;
+
+    @media (min-width: 600px) {
+      flex: 1 1 35%;
+    }
+  }
+
+  &__main-img {
+    img {
+      width: 100%;
+      border-radius: 0.5rem;
+    }
+    @media (min-width: 600px) {
+      margin-left: 1rem;
+      flex: 1 1 65%;
+    }
+  }
+
+  &__rating {
+    margin-top: 1rem;
+
+    &-title {
+      font-size: 1.8rem;
+    }
+
+    &-content {
+      display: flex;
+      flex-flow: column nowrap;
+      p {
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+
+      @media (min-width: 600px) {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+      }
+    }
+
+    &-stats {
+      display: flex;
+      flex-flow: column nowrap;
+
+      p {
+        i {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+.movie-information__genres {
+  background: unset;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin: 0.5rem 0;
+}
+
+.movie-information__genre {
+  border-radius: 5rem;
+  padding: 0.3rem 0.6rem;
+  margin-right: 0.3rem;
+  font-size: 1.3rem;
+
+  @media screen and (min-width: 500px) {
+    margin-top: 0.5rem;
+  }
+}
+
+.panel-btn {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.back-btn {
+  background: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgb(18, 76, 185);
+  color: rgb(18, 76, 185);
+  font-weight: 700;
+  border-radius: 0.5rem;
+  transition: 0.3s ease all;
+
+  &:hover {
+    background-color: rgb(18, 76, 185);
+    color: #fff;
+  }
+}

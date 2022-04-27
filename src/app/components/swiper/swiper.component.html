@@ -1,6 +1,46 @@
-<swiper [config]="config"
-        (swiper)="onSwiper($event)"
-        (slideChange)="onSlideChange()"
-        #swiper>
-  <ng-template swiperSlide *ngFor="movie of dataList">movie</ng-template>
+<swiper
+  [config]="config"
+  #swiper
+>
+  <ng-template
+    class="cast-information"
+    swiperSlide
+    *ngFor="let movie of dataList"
+  >
+    <div
+      [ngStyle]="{
+        'background-size': 'contain',
+        'background-position': 'center',
+        'background-repeat': 'no-repeat',
+        'background-image':
+          'url(https://image.tmdb.org/t/p/w500' + movie.backdrop_path + ')'
+      }"
+    >
+      <div class="movie-information__content">
+        <h2 class="movie-information__title">{{ movie.title }}</h2>
+        <div class="movie-information__genres">
+          <span
+            class="movie-information__genre"
+            *ngFor="let genre of movie.genre_ids"
+            [ngStyle]="{ backgroundColor: randomColor() || '#000000' }"
+          >
+            {{ genre | genre }}</span
+          >
+        </div>
+        <div>
+          <p class="movie-information__details">
+            Vote average:
+            <span>{{ movie.vote_average }}</span>
+          </p>
+          <p class="movie-information__details">
+            Vote cuantity:
+            <span>{{ movie.vote_count }}</span>
+          </p>
+        </div>
+        <div class="movie-information__review">
+          <p>{{ movie.overview | slice: 0:200 }} ...</p>
+        </div>
+      </div>
+    </div>
+  </ng-template>
 </swiper>

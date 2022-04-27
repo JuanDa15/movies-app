@@ -1,0 +1,19 @@
+<swiper [config]="config" #swiper>
+  <ng-template swiperSlide *ngFor="let item of cast">
+    <div
+      class="cast-information"
+      [ngStyle]="{
+        'background-size': 'cover',
+        'background-position': 'center',
+        'background-repeat': 'no-repeat',
+        'background-image':
+          'url(https://image.tmdb.org/t/p/w500' + item.profile_path + ')'
+      }"
+    >
+      <div>
+        <h2>{{ item.character }}</h2>
+        <h3>{{ item.original_name }}</h3>
+      </div>
+    </div>
+  </ng-template>
+</swiper>

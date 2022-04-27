@@ -1,0 +1,8 @@
+<div class="movies-grid">
+  <movie
+    [movie-data]="item"
+    *ngFor="let item of dataList"
+    class="movie"
+    (onClickMovie)="navigateToMovie($event)"
+  ></movie>
+</div>
